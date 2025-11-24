@@ -1,0 +1,419 @@
+.outside-container {
+    height: 300px;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    background: #444;
+    border-radius: 10px;
+}
+
+.card {
+  background: #aaa;
+  height: 200px;
+  width: 400px;
+  padding: 40px 0px 10px 0px;
+  margin-top: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: rgb(45, 49, 53) 4px 4px 8px 0px;
+}
+
+.balance{
+  color: #7eff7e;
+}
+
+.expense{
+  color: #eb7b47;
+}
+
+.btn {
+  margin-top: 10px;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.income-btn {
+  background: #76ef4a;
+}
+
+.expense-btn {
+  background: #ed4949;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 10%;
+}
+
+.food { background: purple;  }
+.ent { background: orange; }
+.trv { background: yellow; }
+
+.middle-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+
+.mid-box {
+  color: white;
+  height: 100px;
+}
+
+
+.section-title {
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-style: italic;
+}
+
+.content-card {
+  background: white;
+  height: 250px;
+  border-radius: 10px;
+  padding: 20px;
+  color: black;
+  box-shadow: 0 0 10px #222;
+}
+
+.no-trans {
+height: 0px;
+min-height: fit-content;
+}
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-circle {
+  width: 42px;
+  height: 42px;
+  background: #f2f2f2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-group .title {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.text-group .date {
+  margin: 0;
+  margin-top: 2px;
+  color: #888;
+  font-size: 14px;
+}
+
+.right-section {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.amount {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f39c12;
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.delete-btn, .edit-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  font-size: 18px;
+  color: white;
+}
+
+.delete-btn {
+  background: #e74c3c;
+}
+
+.edit-btn {
+  background: #f1c40f;
+  color: #333;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .outside-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+    background: #2a2a2a;
+    border-radius: 0;
+  }
+
+  .legend-row {
+    display: contents; /* Allow pie and legend to flow into the single grid cell */
+  }
+
+  .pie-chart-box {
+    order: 3;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .legend {
+    order: 4;
+    justify-content: center;
+    font-size: 12px;
+    gap: 5px;
+    color: white;
+  }
+
+  .card {
+    height: 100px;
+    width: 100%;
+    max-width: none;
+    padding: 15px 10px;
+    margin-top: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background: #3a3a3a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .card h2 {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .balance, .expense {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .btn {
+    padding: 6px 16px;
+    font-size: 12px;
+  }
+
+  .middle-section {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .mid-box {
+    height: auto;
+    padding: 10px;
+    background: #2a2a2a;
+  }
+
+  .section-title {
+    font-size: 18px;
+    color: white;
+  }
+
+  .content-card {
+    height: 200px;
+    padding: 10px;
+    overflow-y: auto;
+    display: block;
+  }
+
+  .content-card.no-trans {
+    height: auto !important;
+    min-height: 200px;
+  }
+
+  .no-trans {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .transaction-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #555;
+    width: 100%;
+  }
+
+  .left-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .text-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .right-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .amount {
+    font-size: 16px;
+    color: #f39c12;
+    margin: 0;
+  }
+
+  .icon-circle {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+
+  .text-group .title {
+    font-size: 14px;
+  }
+
+  .text-group .date {
+    font-size: 12px;
+    margin-top: 0;
+  }
+
+  .btn-group {
+    gap: 4px;
+  }
+
+  .delete-btn, .edit-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .card {
+    height: 90px;
+    padding: 10px;
+  }
+
+  .balance, .expense {
+    font-size: 16px;
+  }
+
+  .pie-chart-box {
+    height: 120px;
+  }
+
+  .btn {
+    padding: 5px 12px;
+    font-size: 11px;
+  }
+
+  .content-card {
+    min-height: 180px;
+    padding: 8px;
+  }
+
+  .content-card.no-trans {
+    min-height: 180px;
+  }
+
+  .no-trans {
+    height: 120px;
+    font-size: 12px;
+  }
+
+  .transaction-item {
+    padding: 10px 0;
+    gap: 6px;
+  }
+
+  .left-section {
+    gap: 6px;
+  }
+
+  .icon-circle {
+    width: 28px;
+    height: 28px;
+  }
+
+  .text-group .title {
+    font-size: 13px;
+  }
+
+  .text-group .date {
+    font-size: 11px;
+  }
+
+  .amount {
+    font-size: 14px;
+  }
+
+  .right-section {
+    gap: 4px;
+  }
+
+  .delete-btn, .edit-btn {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+}

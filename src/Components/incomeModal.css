@@ -1,0 +1,45 @@
+.custom-dialog .MuiBackdrop-root {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  background-color: rgba(208, 208, 208, 0.35);
+}
+
+
+.modal-paper {
+  border-radius: 20px !important;
+  background: rgb(247, 243, 243);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 500px;
+}
+
+.modal-content{
+  width: 450px;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.input-box {
+  border-radius: 15px;
+  background: rgb(94, 91, 91);
+  box-shadow: rgb(45, 49, 53) 0px 2px 4px 0px;
+  width: 500px;
+}
+
+
+.add-btn {
+  background: #f2b13a !important;
+  width:350px !important;
+  border-radius: 10px !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+.cancel-btn {
+  background: #e7e7e7 !important;
+  color: #555 !important;
+  /* padding: 10px 25px !important; */
+  border-radius: 10px !important;
+}

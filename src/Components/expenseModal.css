@@ -1,0 +1,47 @@
+.custom-dialog {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  background-color: rgba(208, 208, 208, 0.35);
+}
+
+
+.modal-paper {
+  padding: 20px 30px;
+  border-radius: 20px !important;
+  background: rgb(200, 203, 212);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-box .MuiOutlinedInput-root {
+  border-radius: 12px;
+  background: white;
+}
+
+.modal-buttons {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.add-btn {
+  background: #f2b13a !important;
+  padding: 10px 25px !important;
+  border-radius: 10px !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+.cancel-btn {
+  background: #e7e7e7 !important;
+  color: #555 !important;
+  padding: 10px 25px !important;
+  border-radius: 10px !important;
+  box-shadow:rgba(0, 0, 0, 0.2) 0px 2px 4px 0px;
+}
