@@ -57,7 +57,7 @@ export default function ExpenseModal({ open, handleClose, handleAddExpense }) {
 
           <div className="input-row">
             <TextField
-                name="category"
+                
                 select
                 label="Select Category"
                 fullWidth
@@ -66,9 +66,9 @@ export default function ExpenseModal({ open, handleClose, handleAddExpense }) {
                 defaultValue=""
               >
                 <MenuItem value="">Select</MenuItem>
-                <MenuItem value="Food">Food</MenuItem>
-                <MenuItem value="Entertainment">Entertainment</MenuItem>
-                <MenuItem value="Travel">Travel</MenuItem>
+                <MenuItem name="category" value="Food">Food</MenuItem>
+                <MenuItem name="category" value="Entertainment">Entertainment</MenuItem>
+                <MenuItem name="category" value="Travel">Travel</MenuItem>
               </TextField>
 
             <TextField
