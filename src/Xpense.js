@@ -28,14 +28,12 @@ const Xpense = () => {
   const { enqueueSnackbar, closeSnackbar } = useSnackbar()
 
     const handleAddIncome = (amount) => {
-      console.log("Income Added");
       const newBalance = balance + Number(amount);
       setBalance(newBalance);
       localStorage.setItem("balance", newBalance);
     };
 
     const handleAddExpense = (data) => {
-      console.log("Expense data", data);
 
       if(data.price > balance){
         enqueueSnackbar("You cannot spend more than your wallet balance!",{variant:"warning"});
@@ -45,7 +43,6 @@ const Xpense = () => {
       const updatedExpenses = [...expenses, data];
       setExpenses(updatedExpenses);
       
-      // // save expenses to local storage
       localStorage.setItem("expenses", JSON.stringify(updatedExpenses));
       
       const newBalance = balance - Number(data.price);
@@ -86,6 +83,17 @@ const Xpense = () => {
       { name: "Entertainment", value: categoryTotals.Entertainment },
       { name: "Travel", value: categoryTotals.Travel },
     ];
+
+    const handleDeleteExpense = (id, price) => {
+          const updatedExpenses = expenses.filter((exp) => exp.id !== id);
+
+          setExpenses(updatedExpenses);
+          localStorage.setItem("expenses", JSON.stringify(updatedExpenses));
+
+          const newBalance = balance + Number(price);
+          setBalance(newBalance);
+          localStorage.setItem("balance", newBalance);
+        };
 
 
   return (
@@ -137,7 +145,7 @@ const Xpense = () => {
                     <div className="right-section">
                       <p className="amount">₹{exp.price}</p>
                       <div className="btn-group">
-                        <button className="delete-btn"><ImCancelCircle /></button>
+                        <button className="delete-btn"onClick={() => handleDeleteExpense(exp.id, exp.price)}><ImCancelCircle /></button>
                         <button className="edit-btn"><MdOutlineEdit /></button>
                       </div>
                     </div>

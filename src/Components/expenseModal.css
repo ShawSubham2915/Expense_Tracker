@@ -24,6 +24,14 @@
   background: white;
 }
 
+.category-dropdown {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+
 .modal-buttons {
   display: flex;
   margin-top: 10px;

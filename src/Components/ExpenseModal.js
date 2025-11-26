@@ -27,7 +27,6 @@ export default function ExpenseModal({ open, handleClose, handleAddExpense }) {
           date
         };
 
-          // console.log(title, price, category, date,expenseData );
           handleAddExpense(expenseData);
           handleClose();
           e.target.reset();
@@ -56,21 +55,13 @@ export default function ExpenseModal({ open, handleClose, handleAddExpense }) {
           </div>
 
           <div className="input-row">
-            <TextField
-                
-                select
-                name="category"
-                label="Select Category"
-                fullWidth
-                className="input-box"
-                required
-                defaultValue=""
-              >
-                <MenuItem value="">Select</MenuItem>
-                <MenuItem value="Food">Food</MenuItem>
-                <MenuItem value="Entertainment">Entertainment</MenuItem>
-                <MenuItem value="Travel">Travel</MenuItem>
-              </TextField>
+           <select name="category" required className="input-box category-dropdown" defaultValue="">
+            <option value="" disabled>Select Category</option>
+            <option value="Food">Food</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Travel">Travel</option>
+          </select>
+
 
             <TextField
               type="date"
